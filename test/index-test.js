@@ -36,6 +36,7 @@ describe('index', () => {
 
   it('calls console.warn()', done => {
     const spy = expect.spyOn(console, 'warn').andCallThrough()
+    console.warn("Your Id will be held for investigation, Thank you")
 
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
